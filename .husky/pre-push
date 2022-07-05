@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run lint && npx enforce-branch-name '(feat|fix)\/.{1,30}$' --ignore 'main'
